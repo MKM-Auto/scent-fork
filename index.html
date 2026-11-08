@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scent Fork — a colony with an undoable memory</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101819;color:#e9eee3;font:16px/1.5 system-ui,sans-serif}main{max-width:1320px;margin:auto;padding:28px}small,.muted{color:#adbeb9}.eyebrow{letter-spacing:.18em;text-transform:uppercase;color:#b9dc8a;font-size:12px}h1{font-size:clamp(32px,5vw,60px);line-height:1.05;margin:14px 0}p{max-width:850px}button{font:inherit;background:#243637;border:1px solid #60736a;color:#fff;border-radius:8px;padding:10px 14px;cursor:pointer}button:hover{background:#3d5550}button:focus-visible{outline:3px solid #e9d489}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.twins{display:grid;grid-template-columns:1fr 1fr;gap:20px}section{min-width:0;border:1px solid #3b504a;border-radius:12px;overflow:hidden;background:#152122}h2{font-size:18px;margin:14px 16px 4px}.stats{margin:0 16px 14px;color:#b9dc8a;font-variant-numeric:tabular-nums}canvas{display:block;width:100%;background:#091315;aspect-ratio:96/60}#experiment{touch-action:none;cursor:crosshair}.note{border-left:3px solid #b9dc8a;padding-left:16px}#event{min-height:24px;color:#efca87}footer{margin-top:26px;color:#adbeb9;font-size:13px}a{color:#b9dc8a}@media(max-width:760px){main{padding:18px}.twins{grid-template-columns:1fr}}
+</style><main>
+<div class="eyebrow">Curiosity Lab / living systems / 01</div><h1>What if a colony forgot?</h1>
+<p>These ants coordinate through trails, not a commander. Let a route form. Fork the moment. Then wipe away its memory on the right — the untouched twin shows what might have happened otherwise.</p>
+<div class="controls"><button id="pause">Pause</button><button id="grow">Grow 400 ticks</button><button id="fork">Fork this moment</button><button id="rain">Rain on experiment</button><button id="reset">Reset seed 73</button><button id="relocate">Set up moved-food trial</button></div>
+<div class="twins"><section><h2>Memory kept / control</h2><div id="leftstats" class="stats"></div><canvas id="control" width="768" height="480" aria-label="Untouched colony visualization"></canvas></section><section><h2>Your intervention / experiment</h2><div id="rightstats" class="stats"></div><canvas id="experiment" width="768" height="480" aria-label="Experimental colony. Drag to erase scent; rain button is a keyboard alternative."></canvas></section></div>
+<p id="scenario">Free play · seed 73 · original food layout</p>
+<div class="controls" aria-label="Same-seed geometry comparison"><button id="nearer">Compare: nearer food</button><button id="mirrored">Compare: mirrored food</button><button id="observe">Observe to tick 1200</button></div>
+<p class="note"><b>Predict before you rain:</b> both comparison presets reset to seed 1000 at tick 600 and pause, with food moved in both worlds. Choose a layout, choose Rain, then Observe to tick 1200. Repeat with the other layout. Does erasing memory help in both? Nearer food moves toward the nest; mirrored food preserves each pile's nest distance but also changes route overlap. These are contrasting toy scenarios, not proof of a mechanism.</p>
+<p id="event" role="status">Same seed. Same world. No intervention yet.</p>
+<p class="note"><b>Try it:</b> click Grow once, then drag across a bright trail on the right. Or use Rain to erase all its scent. Ants and food stay put. Grow again to see the difference. Fork copies the current control over the experiment, discarding your earlier intervention.</p>
+<p class="note"><b>When the world changes:</b> Set up moved-food trial resets to seed 73, grows to tick 600, moves remaining food in BOTH worlds and pauses. Old trails now point to empty places. Try Rain, then Grow: does keeping memory still help? Carried food never moves. The control keeps its scent, not its old food locations.</p>
+<p class="muted">Mint haze = shared scent · ivory = searching ants · gold = carrying food · green circles = food remaining · dashed amber rings = former food locations · violet ring = nest. Gain counters start at relocation or your latest Fork, not at each Rain. Both sides advance together; ticks are simulated steps, not seconds.</p>
+<footer>AI-created local experiment, not calibrated biology. Ants know their home direction; trails evaporate, but do not diffuse. No application analytics or accounts. This hosted page loads from GitHub Pages, which logs visitor IP addresses for security. <a href="scent-fork-comparison-v5.zip">Download the offline comparison</a> to play without hosting requests. Conceptual reference: <a href="https://ccl.northwestern.edu/netlogo/models/Ants">Uri Wilensky's NetLogo Ants (1997), Northwestern CCL</a>. Independently implemented; counterfactual fork is this experiment's focus.</footer>
+</main><script src="model.js"></script><script>
+let control=new Colony(73),experiment=control.clone(),running=true,baseline=null,oldFood=[];
+const $=id=>document.getElementById(id);
+function draw(c,id,stats){const ctx=$(id).getContext('2d'),s=8;ctx.fillStyle='#091315';ctx.fillRect(0,0,768,480);
+for(let y=0;y<c.h;y++)for(let x=0;x<c.w;x++){const v=c.scent[y*c.w+x];if(v>.08){ctx.fillStyle=`rgba(109,221,166,${Math.min(.8,v/15)})`;ctx.fillRect(x*s,y*s,s,s);}}
+for(const f of c.food){ctx.beginPath();ctx.arc(f.x*s,f.y*s,8+Math.sqrt(f.amount),0,Math.PI*2);ctx.fillStyle=f.amount?'#83b55a':'#354638';ctx.fill();ctx.fillStyle='#fff';ctx.font='13px system-ui';ctx.fillText(f.amount,f.x*s-12,f.y*s+4);}
+ctx.save();ctx.strokeStyle='#efca87';ctx.lineWidth=2;ctx.setLineDash([5,5]);
+for(const f of oldFood){ctx.beginPath();ctx.arc(f.x*s,f.y*s,22,0,Math.PI*2);ctx.stroke();}
+ctx.restore();
+ctx.strokeStyle='#b8a2f7';ctx.lineWidth=3;ctx.beginPath();ctx.arc(c.nest.x*s,c.nest.y*s,17,0,Math.PI*2);ctx.stroke();
+for(const a of c.ants){ctx.strokeStyle=a.loaded?'#ffce77':'#e6eee3';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(a.x*s,a.y*s);ctx.lineTo(a.x*s+Math.cos(a.angle)*4,a.y*s+Math.sin(a.angle)*4);ctx.stroke();}
+$(stats).textContent=`${c.delivered} food home · tick ${c.tick}`+(baseline?` · +${c.delivered-baseline.delivered} since tick ${baseline.tick}`:'');}
+function render(){draw(control,'control','leftstats');draw(experiment,'experiment','rightstats');}
+function advance(n){for(let i=0;i<n;i++){control.step();experiment.step();}render();}
+$('pause').onclick=()=>{running=!running;$('pause').textContent=running?'Pause':'Resume';};
+$('grow').onclick=()=>advance(400);
+$('fork').onclick=()=>{experiment=control.clone();baseline={tick:control.tick,delivered:control.delivered};$('event').textContent=`Forked at tick ${control.tick}. Both worlds are identical again. Gain counters restart here.`;render();};
+$('rain').onclick=()=>{experiment.erase(48,30,200);$('event').textContent=`Rain at tick ${experiment.tick}: experiment scent erased. Food and ants unchanged.`;render();};
+function setupTrial(seed,layout){
+  running=false;$('pause').textContent='Resume';control=new Colony(seed);
+  for(let i=0;i<600;i++)control.step();
+  baseline={tick:control.tick,delivered:control.delivered};oldFood=control.food.map(({x,y})=>({x,y}));
+  if(layout==='mirrored')control.food.forEach((f,i)=>{[f.x,f.y]=[[68,44],[78,14]][i];});
+  else control.relocateFood();
+  experiment=control.clone();
+  $('scenario').textContent=`${layout} food · seed ${seed} · relocation at tick 600`;
+  $('event').textContent=`Moved-food trial: reset seed ${seed}, paused at tick 600. BOTH worlds moved remaining food; old trails remain. Now choose Rain, then Grow or Observe.`;render();
+}
+$('relocate').onclick=()=>setupTrial(73,'nearer');
+$('nearer').onclick=()=>setupTrial(1000,'nearer');
+$('mirrored').onclick=()=>setupTrial(1000,'mirrored');
+$('observe').onclick=()=>{
+  running=false;$('pause').textContent='Resume';
+  advance(Math.max(0,1200-control.tick));
+  $('event').textContent=`Paused at tick ${control.tick}. Compare gains since the baseline shown above; Rain and brushing are optional, not automatic. Choose another preset to repeat from tick 600.`;
+};
+$('reset').onclick=()=>{control=new Colony(73);experiment=control.clone();baseline=null;oldFood=[];$('scenario').textContent='Free play · seed 73 · original food layout';$('event').textContent='Reset to seed 73. Both worlds identical.';render();};
+function brush(e){const b=$('experiment').getBoundingClientRect();experiment.erase((e.clientX-b.left)/b.width*96,(e.clientY-b.top)/b.height*60,8);$('event').textContent=`Brush at tick ${experiment.tick}: localized scent erased.`;render();}
+$('experiment').onpointerdown=e=>{$('experiment').setPointerCapture(e.pointerId);brush(e);};
+$('experiment').onpointermove=e=>{if(e.buttons)brush(e);};
+let previous=0;function frame(now){if(running&&now-previous>=33){advance(2);previous=now;}requestAnimationFrame(frame);}render();requestAnimationFrame(frame);
+</script></html>
