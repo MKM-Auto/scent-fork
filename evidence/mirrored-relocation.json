@@ -1,0 +1,1817 @@
+{
+  "question": "Does rain still help when relocation preserves each food pile distance from the nest?",
+  "forkTick": 600,
+  "endTick": 1200,
+  "seeds": "1000–1029, all retained",
+  "oldPositions": [
+    [
+      68,
+      16
+    ],
+    [
+      78,
+      46
+    ]
+  ],
+  "newPositions": [
+    [
+      68,
+      44
+    ],
+    [
+      78,
+      14
+    ]
+  ],
+  "nest": {
+    "x": 18,
+    "y": 30
+  },
+  "checks": {
+    "equalSquaredNestDistances": true,
+    "onlyFoodCoordinatesChanged": true,
+    "conservationEveryPostInterventionTick": true,
+    "stationaryGainsAndTracesExactlyMatchPrior": true
+  },
+  "limits": "Same previously tested seeds; this is a geometry control, not a fresh held-out seed replication. Reflection controls nest distance, not path overlap, boundary effects or discovery difficulty. Divergent random streams, toy rules and one horizon remain. No biological inference.",
+  "summary": {
+    "mirrored": {
+      "positive": 7,
+      "zero": 0,
+      "negative": 23,
+      "median": -43,
+      "min": -121,
+      "max": 40,
+      "mean": -40.8
+    },
+    "priorNearer": {
+      "positive": 30,
+      "zero": 0,
+      "negative": 0,
+      "median": 143.5,
+      "min": 43,
+      "max": 238,
+      "mean": 144.96666666666667
+    },
+    "stationary": {
+      "positive": 4,
+      "zero": 0,
+      "negative": 26,
+      "median": -42,
+      "min": -135,
+      "max": 34,
+      "mean": -41.13333333333333
+    },
+    "changeFromPrior": {
+      "positive": 0,
+      "zero": 0,
+      "negative": 30,
+      "median": -186.5,
+      "min": -317,
+      "max": -27,
+      "mean": -185.76666666666668
+    }
+  },
+  "rows": [
+    {
+      "seed": 1000,
+      "baseline": 50,
+      "gains": {
+        "stationary": 314,
+        "stationaryRain": 252,
+        "moved": 318,
+        "movedRain": 220
+      },
+      "movedRainEffect": -98,
+      "stationaryRainEffect": -62,
+      "priorMovedRainEffect": 45,
+      "changeFromPrior": -143,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 52,
+          "stationaryRain": 42,
+          "moved": 46,
+          "movedRain": 39
+        },
+        {
+          "tick": 800,
+          "stationary": 106,
+          "stationaryRain": 64,
+          "moved": 86,
+          "movedRain": 53
+        },
+        {
+          "tick": 900,
+          "stationary": 156,
+          "stationaryRain": 90,
+          "moved": 137,
+          "movedRain": 93
+        },
+        {
+          "tick": 1000,
+          "stationary": 216,
+          "stationaryRain": 138,
+          "moved": 199,
+          "movedRain": 132
+        },
+        {
+          "tick": 1100,
+          "stationary": 258,
+          "stationaryRain": 191,
+          "moved": 247,
+          "movedRain": 170
+        },
+        {
+          "tick": 1200,
+          "stationary": 314,
+          "stationaryRain": 252,
+          "moved": 318,
+          "movedRain": 220
+        }
+      ]
+    },
+    {
+      "seed": 1001,
+      "baseline": 61,
+      "gains": {
+        "stationary": 307,
+        "stationaryRain": 279,
+        "moved": 229,
+        "movedRain": 269
+      },
+      "movedRainEffect": 40,
+      "stationaryRainEffect": -28,
+      "priorMovedRainEffect": 169,
+      "changeFromPrior": -129,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 46,
+          "stationaryRain": 37,
+          "moved": 35,
+          "movedRain": 34
+        },
+        {
+          "tick": 800,
+          "stationary": 91,
+          "stationaryRain": 67,
+          "moved": 59,
+          "movedRain": 61
+        },
+        {
+          "tick": 900,
+          "stationary": 135,
+          "stationaryRain": 111,
+          "moved": 110,
+          "movedRain": 105
+        },
+        {
+          "tick": 1000,
+          "stationary": 195,
+          "stationaryRain": 162,
+          "moved": 151,
+          "movedRain": 159
+        },
+        {
+          "tick": 1100,
+          "stationary": 244,
+          "stationaryRain": 224,
+          "moved": 198,
+          "movedRain": 211
+        },
+        {
+          "tick": 1200,
+          "stationary": 307,
+          "stationaryRain": 279,
+          "moved": 229,
+          "movedRain": 269
+        }
+      ]
+    },
+    {
+      "seed": 1002,
+      "baseline": 79,
+      "gains": {
+        "stationary": 334,
+        "stationaryRain": 333,
+        "moved": 375,
+        "movedRain": 322
+      },
+      "movedRainEffect": -53,
+      "stationaryRainEffect": -1,
+      "priorMovedRainEffect": 190,
+      "changeFromPrior": -243,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 68,
+          "stationaryRain": 59,
+          "moved": 65,
+          "movedRain": 61
+        },
+        {
+          "tick": 800,
+          "stationary": 119,
+          "stationaryRain": 105,
+          "moved": 116,
+          "movedRain": 98
+        },
+        {
+          "tick": 900,
+          "stationary": 171,
+          "stationaryRain": 168,
+          "moved": 181,
+          "movedRain": 165
+        },
+        {
+          "tick": 1000,
+          "stationary": 233,
+          "stationaryRain": 223,
+          "moved": 259,
+          "movedRain": 214
+        },
+        {
+          "tick": 1100,
+          "stationary": 286,
+          "stationaryRain": 279,
+          "moved": 319,
+          "movedRain": 258
+        },
+        {
+          "tick": 1200,
+          "stationary": 334,
+          "stationaryRain": 333,
+          "moved": 375,
+          "movedRain": 322
+        }
+      ]
+    },
+    {
+      "seed": 1003,
+      "baseline": 75,
+      "gains": {
+        "stationary": 311,
+        "stationaryRain": 252,
+        "moved": 335,
+        "movedRain": 341
+      },
+      "movedRainEffect": 6,
+      "stationaryRainEffect": -59,
+      "priorMovedRainEffect": 93,
+      "changeFromPrior": -87,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 52,
+          "stationaryRain": 47,
+          "moved": 57,
+          "movedRain": 48
+        },
+        {
+          "tick": 800,
+          "stationary": 102,
+          "stationaryRain": 72,
+          "moved": 113,
+          "movedRain": 77
+        },
+        {
+          "tick": 900,
+          "stationary": 146,
+          "stationaryRain": 111,
+          "moved": 161,
+          "movedRain": 135
+        },
+        {
+          "tick": 1000,
+          "stationary": 208,
+          "stationaryRain": 150,
+          "moved": 228,
+          "movedRain": 206
+        },
+        {
+          "tick": 1100,
+          "stationary": 257,
+          "stationaryRain": 204,
+          "moved": 283,
+          "movedRain": 274
+        },
+        {
+          "tick": 1200,
+          "stationary": 311,
+          "stationaryRain": 252,
+          "moved": 335,
+          "movedRain": 341
+        }
+      ]
+    },
+    {
+      "seed": 1004,
+      "baseline": 72,
+      "gains": {
+        "stationary": 336,
+        "stationaryRain": 285,
+        "moved": 340,
+        "movedRain": 280
+      },
+      "movedRainEffect": -60,
+      "stationaryRainEffect": -51,
+      "priorMovedRainEffect": 178,
+      "changeFromPrior": -238,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 52,
+          "stationaryRain": 41,
+          "moved": 48,
+          "movedRain": 44
+        },
+        {
+          "tick": 800,
+          "stationary": 103,
+          "stationaryRain": 75,
+          "moved": 104,
+          "movedRain": 74
+        },
+        {
+          "tick": 900,
+          "stationary": 154,
+          "stationaryRain": 125,
+          "moved": 148,
+          "movedRain": 122
+        },
+        {
+          "tick": 1000,
+          "stationary": 223,
+          "stationaryRain": 173,
+          "moved": 211,
+          "movedRain": 172
+        },
+        {
+          "tick": 1100,
+          "stationary": 282,
+          "stationaryRain": 230,
+          "moved": 281,
+          "movedRain": 225
+        },
+        {
+          "tick": 1200,
+          "stationary": 336,
+          "stationaryRain": 285,
+          "moved": 340,
+          "movedRain": 280
+        }
+      ]
+    },
+    {
+      "seed": 1005,
+      "baseline": 68,
+      "gains": {
+        "stationary": 268,
+        "stationaryRain": 293,
+        "moved": 355,
+        "movedRain": 236
+      },
+      "movedRainEffect": -119,
+      "stationaryRainEffect": 25,
+      "priorMovedRainEffect": 175,
+      "changeFromPrior": -294,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 43,
+          "stationaryRain": 41,
+          "moved": 41,
+          "movedRain": 34
+        },
+        {
+          "tick": 800,
+          "stationary": 81,
+          "stationaryRain": 74,
+          "moved": 92,
+          "movedRain": 64
+        },
+        {
+          "tick": 900,
+          "stationary": 129,
+          "stationaryRain": 114,
+          "moved": 146,
+          "movedRain": 95
+        },
+        {
+          "tick": 1000,
+          "stationary": 167,
+          "stationaryRain": 170,
+          "moved": 211,
+          "movedRain": 133
+        },
+        {
+          "tick": 1100,
+          "stationary": 226,
+          "stationaryRain": 230,
+          "moved": 285,
+          "movedRain": 178
+        },
+        {
+          "tick": 1200,
+          "stationary": 268,
+          "stationaryRain": 293,
+          "moved": 355,
+          "movedRain": 236
+        }
+      ]
+    },
+    {
+      "seed": 1006,
+      "baseline": 124,
+      "gains": {
+        "stationary": 304,
+        "stationaryRain": 291,
+        "moved": 330,
+        "movedRain": 243
+      },
+      "movedRainEffect": -87,
+      "stationaryRainEffect": -13,
+      "priorMovedRainEffect": 85,
+      "changeFromPrior": -172,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 42,
+          "stationaryRain": 34,
+          "moved": 34,
+          "movedRain": 33
+        },
+        {
+          "tick": 800,
+          "stationary": 90,
+          "stationaryRain": 62,
+          "moved": 78,
+          "movedRain": 63
+        },
+        {
+          "tick": 900,
+          "stationary": 145,
+          "stationaryRain": 111,
+          "moved": 142,
+          "movedRain": 96
+        },
+        {
+          "tick": 1000,
+          "stationary": 190,
+          "stationaryRain": 179,
+          "moved": 204,
+          "movedRain": 147
+        },
+        {
+          "tick": 1100,
+          "stationary": 249,
+          "stationaryRain": 233,
+          "moved": 267,
+          "movedRain": 195
+        },
+        {
+          "tick": 1200,
+          "stationary": 304,
+          "stationaryRain": 291,
+          "moved": 330,
+          "movedRain": 243
+        }
+      ]
+    },
+    {
+      "seed": 1007,
+      "baseline": 76,
+      "gains": {
+        "stationary": 304,
+        "stationaryRain": 264,
+        "moved": 372,
+        "movedRain": 297
+      },
+      "movedRainEffect": -75,
+      "stationaryRainEffect": -40,
+      "priorMovedRainEffect": 146,
+      "changeFromPrior": -221,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 46,
+          "stationaryRain": 44,
+          "moved": 44,
+          "movedRain": 40
+        },
+        {
+          "tick": 800,
+          "stationary": 83,
+          "stationaryRain": 62,
+          "moved": 86,
+          "movedRain": 75
+        },
+        {
+          "tick": 900,
+          "stationary": 135,
+          "stationaryRain": 99,
+          "moved": 155,
+          "movedRain": 130
+        },
+        {
+          "tick": 1000,
+          "stationary": 195,
+          "stationaryRain": 151,
+          "moved": 219,
+          "movedRain": 180
+        },
+        {
+          "tick": 1100,
+          "stationary": 246,
+          "stationaryRain": 202,
+          "moved": 295,
+          "movedRain": 239
+        },
+        {
+          "tick": 1200,
+          "stationary": 304,
+          "stationaryRain": 264,
+          "moved": 372,
+          "movedRain": 297
+        }
+      ]
+    },
+    {
+      "seed": 1008,
+      "baseline": 81,
+      "gains": {
+        "stationary": 313,
+        "stationaryRain": 228,
+        "moved": 317,
+        "movedRain": 250
+      },
+      "movedRainEffect": -67,
+      "stationaryRainEffect": -85,
+      "priorMovedRainEffect": 157,
+      "changeFromPrior": -224,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 40,
+          "stationaryRain": 35,
+          "moved": 47,
+          "movedRain": 40
+        },
+        {
+          "tick": 800,
+          "stationary": 95,
+          "stationaryRain": 50,
+          "moved": 89,
+          "movedRain": 62
+        },
+        {
+          "tick": 900,
+          "stationary": 152,
+          "stationaryRain": 81,
+          "moved": 146,
+          "movedRain": 105
+        },
+        {
+          "tick": 1000,
+          "stationary": 201,
+          "stationaryRain": 127,
+          "moved": 202,
+          "movedRain": 146
+        },
+        {
+          "tick": 1100,
+          "stationary": 266,
+          "stationaryRain": 178,
+          "moved": 251,
+          "movedRain": 189
+        },
+        {
+          "tick": 1200,
+          "stationary": 313,
+          "stationaryRain": 228,
+          "moved": 317,
+          "movedRain": 250
+        }
+      ]
+    },
+    {
+      "seed": 1009,
+      "baseline": 54,
+      "gains": {
+        "stationary": 326,
+        "stationaryRain": 268,
+        "moved": 328,
+        "movedRain": 340
+      },
+      "movedRainEffect": 12,
+      "stationaryRainEffect": -58,
+      "priorMovedRainEffect": 138,
+      "changeFromPrior": -126,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 37,
+          "stationaryRain": 32,
+          "moved": 46,
+          "movedRain": 42
+        },
+        {
+          "tick": 800,
+          "stationary": 85,
+          "stationaryRain": 51,
+          "moved": 88,
+          "movedRain": 75
+        },
+        {
+          "tick": 900,
+          "stationary": 144,
+          "stationaryRain": 94,
+          "moved": 151,
+          "movedRain": 149
+        },
+        {
+          "tick": 1000,
+          "stationary": 207,
+          "stationaryRain": 152,
+          "moved": 207,
+          "movedRain": 213
+        },
+        {
+          "tick": 1100,
+          "stationary": 274,
+          "stationaryRain": 212,
+          "moved": 264,
+          "movedRain": 278
+        },
+        {
+          "tick": 1200,
+          "stationary": 326,
+          "stationaryRain": 268,
+          "moved": 328,
+          "movedRain": 340
+        }
+      ]
+    },
+    {
+      "seed": 1010,
+      "baseline": 39,
+      "gains": {
+        "stationary": 317,
+        "stationaryRain": 237,
+        "moved": 341,
+        "movedRain": 294
+      },
+      "movedRainEffect": -47,
+      "stationaryRainEffect": -80,
+      "priorMovedRainEffect": 215,
+      "changeFromPrior": -262,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 39,
+          "stationaryRain": 26,
+          "moved": 33,
+          "movedRain": 30
+        },
+        {
+          "tick": 800,
+          "stationary": 79,
+          "stationaryRain": 53,
+          "moved": 88,
+          "movedRain": 62
+        },
+        {
+          "tick": 900,
+          "stationary": 135,
+          "stationaryRain": 95,
+          "moved": 162,
+          "movedRain": 110
+        },
+        {
+          "tick": 1000,
+          "stationary": 194,
+          "stationaryRain": 139,
+          "moved": 231,
+          "movedRain": 164
+        },
+        {
+          "tick": 1100,
+          "stationary": 248,
+          "stationaryRain": 188,
+          "moved": 283,
+          "movedRain": 223
+        },
+        {
+          "tick": 1200,
+          "stationary": 317,
+          "stationaryRain": 237,
+          "moved": 341,
+          "movedRain": 294
+        }
+      ]
+    },
+    {
+      "seed": 1011,
+      "baseline": 69,
+      "gains": {
+        "stationary": 314,
+        "stationaryRain": 204,
+        "moved": 323,
+        "movedRain": 237
+      },
+      "movedRainEffect": -86,
+      "stationaryRainEffect": -110,
+      "priorMovedRainEffect": 132,
+      "changeFromPrior": -218,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 40,
+          "stationaryRain": 33,
+          "moved": 32,
+          "movedRain": 30
+        },
+        {
+          "tick": 800,
+          "stationary": 97,
+          "stationaryRain": 57,
+          "moved": 83,
+          "movedRain": 39
+        },
+        {
+          "tick": 900,
+          "stationary": 140,
+          "stationaryRain": 83,
+          "moved": 141,
+          "movedRain": 82
+        },
+        {
+          "tick": 1000,
+          "stationary": 192,
+          "stationaryRain": 125,
+          "moved": 205,
+          "movedRain": 141
+        },
+        {
+          "tick": 1100,
+          "stationary": 252,
+          "stationaryRain": 161,
+          "moved": 263,
+          "movedRain": 186
+        },
+        {
+          "tick": 1200,
+          "stationary": 314,
+          "stationaryRain": 204,
+          "moved": 323,
+          "movedRain": 237
+        }
+      ]
+    },
+    {
+      "seed": 1012,
+      "baseline": 80,
+      "gains": {
+        "stationary": 288,
+        "stationaryRain": 322,
+        "moved": 311,
+        "movedRain": 233
+      },
+      "movedRainEffect": -78,
+      "stationaryRainEffect": 34,
+      "priorMovedRainEffect": 114,
+      "changeFromPrior": -192,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 47,
+          "stationaryRain": 46,
+          "moved": 47,
+          "movedRain": 43
+        },
+        {
+          "tick": 800,
+          "stationary": 91,
+          "stationaryRain": 82,
+          "moved": 88,
+          "movedRain": 64
+        },
+        {
+          "tick": 900,
+          "stationary": 133,
+          "stationaryRain": 129,
+          "moved": 152,
+          "movedRain": 101
+        },
+        {
+          "tick": 1000,
+          "stationary": 180,
+          "stationaryRain": 185,
+          "moved": 203,
+          "movedRain": 148
+        },
+        {
+          "tick": 1100,
+          "stationary": 246,
+          "stationaryRain": 257,
+          "moved": 254,
+          "movedRain": 188
+        },
+        {
+          "tick": 1200,
+          "stationary": 288,
+          "stationaryRain": 322,
+          "moved": 311,
+          "movedRain": 233
+        }
+      ]
+    },
+    {
+      "seed": 1013,
+      "baseline": 83,
+      "gains": {
+        "stationary": 314,
+        "stationaryRain": 256,
+        "moved": 332,
+        "movedRain": 319
+      },
+      "movedRainEffect": -13,
+      "stationaryRainEffect": -58,
+      "priorMovedRainEffect": 137,
+      "changeFromPrior": -150,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 47,
+          "stationaryRain": 41,
+          "moved": 41,
+          "movedRain": 39
+        },
+        {
+          "tick": 800,
+          "stationary": 96,
+          "stationaryRain": 63,
+          "moved": 88,
+          "movedRain": 72
+        },
+        {
+          "tick": 900,
+          "stationary": 148,
+          "stationaryRain": 97,
+          "moved": 152,
+          "movedRain": 118
+        },
+        {
+          "tick": 1000,
+          "stationary": 207,
+          "stationaryRain": 150,
+          "moved": 208,
+          "movedRain": 188
+        },
+        {
+          "tick": 1100,
+          "stationary": 262,
+          "stationaryRain": 201,
+          "moved": 274,
+          "movedRain": 246
+        },
+        {
+          "tick": 1200,
+          "stationary": 314,
+          "stationaryRain": 256,
+          "moved": 332,
+          "movedRain": 319
+        }
+      ]
+    },
+    {
+      "seed": 1014,
+      "baseline": 52,
+      "gains": {
+        "stationary": 329,
+        "stationaryRain": 289,
+        "moved": 290,
+        "movedRain": 304
+      },
+      "movedRainEffect": 14,
+      "stationaryRainEffect": -40,
+      "priorMovedRainEffect": 141,
+      "changeFromPrior": -127,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 46,
+          "stationaryRain": 41,
+          "moved": 43,
+          "movedRain": 39
+        },
+        {
+          "tick": 800,
+          "stationary": 94,
+          "stationaryRain": 69,
+          "moved": 81,
+          "movedRain": 71
+        },
+        {
+          "tick": 900,
+          "stationary": 150,
+          "stationaryRain": 126,
+          "moved": 135,
+          "movedRain": 126
+        },
+        {
+          "tick": 1000,
+          "stationary": 215,
+          "stationaryRain": 182,
+          "moved": 181,
+          "movedRain": 185
+        },
+        {
+          "tick": 1100,
+          "stationary": 270,
+          "stationaryRain": 224,
+          "moved": 236,
+          "movedRain": 248
+        },
+        {
+          "tick": 1200,
+          "stationary": 329,
+          "stationaryRain": 289,
+          "moved": 290,
+          "movedRain": 304
+        }
+      ]
+    },
+    {
+      "seed": 1015,
+      "baseline": 90,
+      "gains": {
+        "stationary": 333,
+        "stationaryRain": 306,
+        "moved": 290,
+        "movedRain": 259
+      },
+      "movedRainEffect": -31,
+      "stationaryRainEffect": -27,
+      "priorMovedRainEffect": 166,
+      "changeFromPrior": -197,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 52,
+          "stationaryRain": 41,
+          "moved": 46,
+          "movedRain": 37
+        },
+        {
+          "tick": 800,
+          "stationary": 100,
+          "stationaryRain": 81,
+          "moved": 84,
+          "movedRain": 58
+        },
+        {
+          "tick": 900,
+          "stationary": 156,
+          "stationaryRain": 135,
+          "moved": 130,
+          "movedRain": 89
+        },
+        {
+          "tick": 1000,
+          "stationary": 222,
+          "stationaryRain": 187,
+          "moved": 184,
+          "movedRain": 139
+        },
+        {
+          "tick": 1100,
+          "stationary": 275,
+          "stationaryRain": 252,
+          "moved": 237,
+          "movedRain": 199
+        },
+        {
+          "tick": 1200,
+          "stationary": 333,
+          "stationaryRain": 306,
+          "moved": 290,
+          "movedRain": 259
+        }
+      ]
+    },
+    {
+      "seed": 1016,
+      "baseline": 99,
+      "gains": {
+        "stationary": 306,
+        "stationaryRain": 262,
+        "moved": 270,
+        "movedRain": 271
+      },
+      "movedRainEffect": 1,
+      "stationaryRainEffect": -44,
+      "priorMovedRainEffect": 111,
+      "changeFromPrior": -110,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 42,
+          "stationaryRain": 34,
+          "moved": 34,
+          "movedRain": 28
+        },
+        {
+          "tick": 800,
+          "stationary": 87,
+          "stationaryRain": 75,
+          "moved": 66,
+          "movedRain": 42
+        },
+        {
+          "tick": 900,
+          "stationary": 138,
+          "stationaryRain": 121,
+          "moved": 116,
+          "movedRain": 85
+        },
+        {
+          "tick": 1000,
+          "stationary": 187,
+          "stationaryRain": 177,
+          "moved": 167,
+          "movedRain": 136
+        },
+        {
+          "tick": 1100,
+          "stationary": 248,
+          "stationaryRain": 221,
+          "moved": 222,
+          "movedRain": 198
+        },
+        {
+          "tick": 1200,
+          "stationary": 306,
+          "stationaryRain": 262,
+          "moved": 270,
+          "movedRain": 271
+        }
+      ]
+    },
+    {
+      "seed": 1017,
+      "baseline": 79,
+      "gains": {
+        "stationary": 355,
+        "stationaryRain": 280,
+        "moved": 339,
+        "movedRain": 299
+      },
+      "movedRainEffect": -40,
+      "stationaryRainEffect": -75,
+      "priorMovedRainEffect": 153,
+      "changeFromPrior": -193,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 49,
+          "stationaryRain": 42,
+          "moved": 43,
+          "movedRain": 37
+        },
+        {
+          "tick": 800,
+          "stationary": 107,
+          "stationaryRain": 72,
+          "moved": 80,
+          "movedRain": 63
+        },
+        {
+          "tick": 900,
+          "stationary": 171,
+          "stationaryRain": 106,
+          "moved": 143,
+          "movedRain": 110
+        },
+        {
+          "tick": 1000,
+          "stationary": 234,
+          "stationaryRain": 151,
+          "moved": 209,
+          "movedRain": 175
+        },
+        {
+          "tick": 1100,
+          "stationary": 293,
+          "stationaryRain": 212,
+          "moved": 270,
+          "movedRain": 236
+        },
+        {
+          "tick": 1200,
+          "stationary": 355,
+          "stationaryRain": 280,
+          "moved": 339,
+          "movedRain": 299
+        }
+      ]
+    },
+    {
+      "seed": 1018,
+      "baseline": 118,
+      "gains": {
+        "stationary": 324,
+        "stationaryRain": 246,
+        "moved": 283,
+        "movedRain": 282
+      },
+      "movedRainEffect": -1,
+      "stationaryRainEffect": -78,
+      "priorMovedRainEffect": 109,
+      "changeFromPrior": -110,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 45,
+          "stationaryRain": 37,
+          "moved": 40,
+          "movedRain": 38
+        },
+        {
+          "tick": 800,
+          "stationary": 89,
+          "stationaryRain": 62,
+          "moved": 70,
+          "movedRain": 57
+        },
+        {
+          "tick": 900,
+          "stationary": 146,
+          "stationaryRain": 106,
+          "moved": 116,
+          "movedRain": 106
+        },
+        {
+          "tick": 1000,
+          "stationary": 212,
+          "stationaryRain": 150,
+          "moved": 173,
+          "movedRain": 151
+        },
+        {
+          "tick": 1100,
+          "stationary": 266,
+          "stationaryRain": 201,
+          "moved": 226,
+          "movedRain": 218
+        },
+        {
+          "tick": 1200,
+          "stationary": 324,
+          "stationaryRain": 246,
+          "moved": 283,
+          "movedRain": 282
+        }
+      ]
+    },
+    {
+      "seed": 1019,
+      "baseline": 70,
+      "gains": {
+        "stationary": 253,
+        "stationaryRain": 257,
+        "moved": 251,
+        "movedRain": 210
+      },
+      "movedRainEffect": -41,
+      "stationaryRainEffect": 4,
+      "priorMovedRainEffect": 107,
+      "changeFromPrior": -148,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 33,
+          "stationaryRain": 29,
+          "moved": 29,
+          "movedRain": 28
+        },
+        {
+          "tick": 800,
+          "stationary": 84,
+          "stationaryRain": 62,
+          "moved": 53,
+          "movedRain": 40
+        },
+        {
+          "tick": 900,
+          "stationary": 126,
+          "stationaryRain": 122,
+          "moved": 96,
+          "movedRain": 67
+        },
+        {
+          "tick": 1000,
+          "stationary": 165,
+          "stationaryRain": 160,
+          "moved": 147,
+          "movedRain": 111
+        },
+        {
+          "tick": 1100,
+          "stationary": 205,
+          "stationaryRain": 204,
+          "moved": 196,
+          "movedRain": 163
+        },
+        {
+          "tick": 1200,
+          "stationary": 253,
+          "stationaryRain": 257,
+          "moved": 251,
+          "movedRain": 210
+        }
+      ]
+    },
+    {
+      "seed": 1020,
+      "baseline": 45,
+      "gains": {
+        "stationary": 243,
+        "stationaryRain": 231,
+        "moved": 262,
+        "movedRain": 268
+      },
+      "movedRainEffect": 6,
+      "stationaryRainEffect": -12,
+      "priorMovedRainEffect": 187,
+      "changeFromPrior": -181,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 36,
+          "stationaryRain": 30,
+          "moved": 35,
+          "movedRain": 32
+        },
+        {
+          "tick": 800,
+          "stationary": 80,
+          "stationaryRain": 56,
+          "moved": 71,
+          "movedRain": 58
+        },
+        {
+          "tick": 900,
+          "stationary": 123,
+          "stationaryRain": 97,
+          "moved": 114,
+          "movedRain": 104
+        },
+        {
+          "tick": 1000,
+          "stationary": 160,
+          "stationaryRain": 134,
+          "moved": 166,
+          "movedRain": 168
+        },
+        {
+          "tick": 1100,
+          "stationary": 203,
+          "stationaryRain": 196,
+          "moved": 218,
+          "movedRain": 217
+        },
+        {
+          "tick": 1200,
+          "stationary": 243,
+          "stationaryRain": 231,
+          "moved": 262,
+          "movedRain": 268
+        }
+      ]
+    },
+    {
+      "seed": 1021,
+      "baseline": 103,
+      "gains": {
+        "stationary": 411,
+        "stationaryRain": 353,
+        "moved": 352,
+        "movedRain": 271
+      },
+      "movedRainEffect": -81,
+      "stationaryRainEffect": -58,
+      "priorMovedRainEffect": 201,
+      "changeFromPrior": -282,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 60,
+          "stationaryRain": 52,
+          "moved": 56,
+          "movedRain": 47
+        },
+        {
+          "tick": 800,
+          "stationary": 134,
+          "stationaryRain": 111,
+          "moved": 100,
+          "movedRain": 74
+        },
+        {
+          "tick": 900,
+          "stationary": 211,
+          "stationaryRain": 168,
+          "moved": 153,
+          "movedRain": 108
+        },
+        {
+          "tick": 1000,
+          "stationary": 270,
+          "stationaryRain": 229,
+          "moved": 227,
+          "movedRain": 172
+        },
+        {
+          "tick": 1100,
+          "stationary": 341,
+          "stationaryRain": 294,
+          "moved": 287,
+          "movedRain": 219
+        },
+        {
+          "tick": 1200,
+          "stationary": 411,
+          "stationaryRain": 353,
+          "moved": 352,
+          "movedRain": 271
+        }
+      ]
+    },
+    {
+      "seed": 1022,
+      "baseline": 79,
+      "gains": {
+        "stationary": 252,
+        "stationaryRain": 234,
+        "moved": 251,
+        "movedRain": 229
+      },
+      "movedRainEffect": -22,
+      "stationaryRainEffect": -18,
+      "priorMovedRainEffect": 141,
+      "changeFromPrior": -163,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 41,
+          "stationaryRain": 32,
+          "moved": 38,
+          "movedRain": 34
+        },
+        {
+          "tick": 800,
+          "stationary": 83,
+          "stationaryRain": 46,
+          "moved": 58,
+          "movedRain": 56
+        },
+        {
+          "tick": 900,
+          "stationary": 128,
+          "stationaryRain": 73,
+          "moved": 101,
+          "movedRain": 96
+        },
+        {
+          "tick": 1000,
+          "stationary": 164,
+          "stationaryRain": 119,
+          "moved": 147,
+          "movedRain": 135
+        },
+        {
+          "tick": 1100,
+          "stationary": 206,
+          "stationaryRain": 186,
+          "moved": 196,
+          "movedRain": 186
+        },
+        {
+          "tick": 1200,
+          "stationary": 252,
+          "stationaryRain": 234,
+          "moved": 251,
+          "movedRain": 229
+        }
+      ]
+    },
+    {
+      "seed": 1023,
+      "baseline": 79,
+      "gains": {
+        "stationary": 286,
+        "stationaryRain": 242,
+        "moved": 278,
+        "movedRain": 274
+      },
+      "movedRainEffect": -4,
+      "stationaryRainEffect": -44,
+      "priorMovedRainEffect": 105,
+      "changeFromPrior": -109,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 45,
+          "stationaryRain": 33,
+          "moved": 33,
+          "movedRain": 30
+        },
+        {
+          "tick": 800,
+          "stationary": 83,
+          "stationaryRain": 52,
+          "moved": 61,
+          "movedRain": 42
+        },
+        {
+          "tick": 900,
+          "stationary": 130,
+          "stationaryRain": 81,
+          "moved": 110,
+          "movedRain": 91
+        },
+        {
+          "tick": 1000,
+          "stationary": 181,
+          "stationaryRain": 131,
+          "moved": 169,
+          "movedRain": 150
+        },
+        {
+          "tick": 1100,
+          "stationary": 227,
+          "stationaryRain": 184,
+          "moved": 221,
+          "movedRain": 214
+        },
+        {
+          "tick": 1200,
+          "stationary": 286,
+          "stationaryRain": 242,
+          "moved": 278,
+          "movedRain": 274
+        }
+      ]
+    },
+    {
+      "seed": 1024,
+      "baseline": 70,
+      "gains": {
+        "stationary": 307,
+        "stationaryRain": 243,
+        "moved": 357,
+        "movedRain": 332
+      },
+      "movedRainEffect": -25,
+      "stationaryRainEffect": -64,
+      "priorMovedRainEffect": 96,
+      "changeFromPrior": -121,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 58,
+          "stationaryRain": 47,
+          "moved": 63,
+          "movedRain": 56
+        },
+        {
+          "tick": 800,
+          "stationary": 105,
+          "stationaryRain": 75,
+          "moved": 115,
+          "movedRain": 98
+        },
+        {
+          "tick": 900,
+          "stationary": 161,
+          "stationaryRain": 119,
+          "moved": 192,
+          "movedRain": 151
+        },
+        {
+          "tick": 1000,
+          "stationary": 221,
+          "stationaryRain": 161,
+          "moved": 244,
+          "movedRain": 214
+        },
+        {
+          "tick": 1100,
+          "stationary": 265,
+          "stationaryRain": 202,
+          "moved": 306,
+          "movedRain": 274
+        },
+        {
+          "tick": 1200,
+          "stationary": 307,
+          "stationaryRain": 243,
+          "moved": 357,
+          "movedRain": 332
+        }
+      ]
+    },
+    {
+      "seed": 1025,
+      "baseline": 70,
+      "gains": {
+        "stationary": 313,
+        "stationaryRain": 289,
+        "moved": 337,
+        "movedRain": 258
+      },
+      "movedRainEffect": -79,
+      "stationaryRainEffect": -24,
+      "priorMovedRainEffect": 238,
+      "changeFromPrior": -317,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 38,
+          "stationaryRain": 34,
+          "moved": 42,
+          "movedRain": 41
+        },
+        {
+          "tick": 800,
+          "stationary": 100,
+          "stationaryRain": 70,
+          "moved": 82,
+          "movedRain": 64
+        },
+        {
+          "tick": 900,
+          "stationary": 147,
+          "stationaryRain": 120,
+          "moved": 145,
+          "movedRain": 112
+        },
+        {
+          "tick": 1000,
+          "stationary": 205,
+          "stationaryRain": 176,
+          "moved": 202,
+          "movedRain": 156
+        },
+        {
+          "tick": 1100,
+          "stationary": 267,
+          "stationaryRain": 231,
+          "moved": 272,
+          "movedRain": 204
+        },
+        {
+          "tick": 1200,
+          "stationary": 313,
+          "stationaryRain": 289,
+          "moved": 337,
+          "movedRain": 258
+        }
+      ]
+    },
+    {
+      "seed": 1026,
+      "baseline": 83,
+      "gains": {
+        "stationary": 363,
+        "stationaryRain": 361,
+        "moved": 313,
+        "movedRain": 329
+      },
+      "movedRainEffect": 16,
+      "stationaryRainEffect": -2,
+      "priorMovedRainEffect": 43,
+      "changeFromPrior": -27,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 58,
+          "stationaryRain": 54,
+          "moved": 58,
+          "movedRain": 52
+        },
+        {
+          "tick": 800,
+          "stationary": 118,
+          "stationaryRain": 94,
+          "moved": 102,
+          "movedRain": 91
+        },
+        {
+          "tick": 900,
+          "stationary": 180,
+          "stationaryRain": 159,
+          "moved": 163,
+          "movedRain": 144
+        },
+        {
+          "tick": 1000,
+          "stationary": 244,
+          "stationaryRain": 219,
+          "moved": 222,
+          "movedRain": 192
+        },
+        {
+          "tick": 1100,
+          "stationary": 305,
+          "stationaryRain": 295,
+          "moved": 268,
+          "movedRain": 262
+        },
+        {
+          "tick": 1200,
+          "stationary": 363,
+          "stationaryRain": 361,
+          "moved": 313,
+          "movedRain": 329
+        }
+      ]
+    },
+    {
+      "seed": 1027,
+      "baseline": 84,
+      "gains": {
+        "stationary": 308,
+        "stationaryRain": 313,
+        "moved": 293,
+        "movedRain": 247
+      },
+      "movedRainEffect": -46,
+      "stationaryRainEffect": 5,
+      "priorMovedRainEffect": 222,
+      "changeFromPrior": -268,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 38,
+          "stationaryRain": 36,
+          "moved": 42,
+          "movedRain": 33
+        },
+        {
+          "tick": 800,
+          "stationary": 83,
+          "stationaryRain": 66,
+          "moved": 78,
+          "movedRain": 59
+        },
+        {
+          "tick": 900,
+          "stationary": 123,
+          "stationaryRain": 115,
+          "moved": 140,
+          "movedRain": 95
+        },
+        {
+          "tick": 1000,
+          "stationary": 175,
+          "stationaryRain": 179,
+          "moved": 181,
+          "movedRain": 140
+        },
+        {
+          "tick": 1100,
+          "stationary": 243,
+          "stationaryRain": 247,
+          "moved": 236,
+          "movedRain": 189
+        },
+        {
+          "tick": 1200,
+          "stationary": 308,
+          "stationaryRain": 313,
+          "moved": 293,
+          "movedRain": 247
+        }
+      ]
+    },
+    {
+      "seed": 1028,
+      "baseline": 69,
+      "gains": {
+        "stationary": 374,
+        "stationaryRain": 239,
+        "moved": 380,
+        "movedRain": 259
+      },
+      "movedRainEffect": -121,
+      "stationaryRainEffect": -135,
+      "priorMovedRainEffect": 162,
+      "changeFromPrior": -283,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 46,
+          "stationaryRain": 42,
+          "moved": 54,
+          "movedRain": 48
+        },
+        {
+          "tick": 800,
+          "stationary": 121,
+          "stationaryRain": 70,
+          "moved": 111,
+          "movedRain": 74
+        },
+        {
+          "tick": 900,
+          "stationary": 191,
+          "stationaryRain": 91,
+          "moved": 178,
+          "movedRain": 123
+        },
+        {
+          "tick": 1000,
+          "stationary": 247,
+          "stationaryRain": 131,
+          "moved": 248,
+          "movedRain": 162
+        },
+        {
+          "tick": 1100,
+          "stationary": 314,
+          "stationaryRain": 178,
+          "moved": 305,
+          "movedRain": 205
+        },
+        {
+          "tick": 1200,
+          "stationary": 374,
+          "stationaryRain": 239,
+          "moved": 380,
+          "movedRain": 259
+        }
+      ]
+    },
+    {
+      "seed": 1029,
+      "baseline": 137,
+      "gains": {
+        "stationary": 379,
+        "stationaryRain": 343,
+        "moved": 342,
+        "movedRain": 297
+      },
+      "movedRainEffect": -45,
+      "stationaryRainEffect": -36,
+      "priorMovedRainEffect": 193,
+      "changeFromPrior": -238,
+      "samples": [
+        {
+          "tick": 700,
+          "stationary": 66,
+          "stationaryRain": 54,
+          "moved": 57,
+          "movedRain": 53
+        },
+        {
+          "tick": 800,
+          "stationary": 134,
+          "stationaryRain": 98,
+          "moved": 96,
+          "movedRain": 83
+        },
+        {
+          "tick": 900,
+          "stationary": 195,
+          "stationaryRain": 149,
+          "moved": 157,
+          "movedRain": 142
+        },
+        {
+          "tick": 1000,
+          "stationary": 257,
+          "stationaryRain": 214,
+          "moved": 217,
+          "movedRain": 193
+        },
+        {
+          "tick": 1100,
+          "stationary": 324,
+          "stationaryRain": 272,
+          "moved": 283,
+          "movedRain": 245
+        },
+        {
+          "tick": 1200,
+          "stationary": 379,
+          "stationaryRain": 343,
+          "moved": 342,
+          "movedRain": 297
+        }
+      ]
+    }
+  ]
+}
