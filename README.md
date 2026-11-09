@@ -37,3 +37,12 @@ The same intervention can help or hurt depending on layout in this toy. It does 
 The application has no analytics, accounts or automatic network requests. The external attribution link opens a website only if followed. Screenshots and browser/model checks are automated evidence, not visual or human review. The included Python comparison test needs Playwright and an installed Chrome to rerun; Node tests need Node.js. Neither is required to play. Development dependencies are not bundled.
 
 Conceptual reference: Uri Wilensky (1997), [NetLogo Ants, Northwestern CCL](https://ccl.northwestern.edu/netlogo/models/Ants). Independent implementation; no NetLogo source code or assets copied. Its model is distributed under CC BY-NC-SA 3.0. The same-state fork and paired layout comparison are this experiment's focus.
+
+
+## Reproduce the research
+
+[Download the source-only research archive](scent-fork-research-v9.zip) · [Reproduction instructions](REPRODUCE.md)
+
+This is separate from the playable offline edition. Extract it and follow the instructions to run two model tests and both complete 30-seed protocols using Node.js, with no npm dependencies. Numerical reports are generated, not bundled. Complete regenerated outputs matched the published evidence on Windows with Node v22.23.2; this is same-environment reproduction, not independent scientific validation or a cross-platform guarantee.
+
+Archive SHA256: `71f28f99e5aef32aadaa32daf78ed89f92069063c9fb1e1189b24dbb97af05e7`.
